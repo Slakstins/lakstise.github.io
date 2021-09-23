@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Montserrat&display=swap');
+
 :root {
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
+    --color: aliceblue;
+    --color-hightlight: #B0A745;
+    --color-dark: #9100358a;
 }
 
 
@@ -10,6 +15,7 @@ body#about img{
 }
 
 img {width: 17em}
+
 p, li {
     max-width: 50em;
     font-size: 18px;
@@ -17,6 +23,17 @@ p, li {
 }
 h1, h2, h3{
     line-height: 1em;
+    height: 50px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+a {
+    color: var(--color);
+    text-decoration-color: var(--color-hightlight);
+}
+
+a:hover {
+    text-decoration-color: var(--color-dark);
 }
 
 body > * {
@@ -24,7 +41,16 @@ body > * {
     padding-right: var(--horizontal-space);
 }
 
+main {
+    background-color: var(--color-dark);
+}
+
 body {
+    color: var(--color);
+    background: #0F2027;  /* fallback for old browsers */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-areas: "head head"
                          "nav nav"
@@ -32,17 +58,10 @@ body {
                          "foot foot";
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto auto 1fr auto;
+
 }
 
-@media screen and (min-width: 30em){
-    body {
-        display: grid;
-        grid-template-areas: "head head"
-                            "nav main"
-                            "foot foot";
-        grid-template-rows: auto 1fr auto;
-    }
-}
+
 
 body > header {
     grid-area:head;
@@ -86,14 +105,22 @@ body#portfolio ul#portfolioItems{
     list-style-type: none;
     padding: 0;
 }
-
-@media screen and (min-width: 30em){
-    body#portfolio ul#portfolioItems li{
-        flex-basis: 48%;
-        padding-right: 2%;
-}
-}
 body#portfolio ul#portfolioItems li img{
 
     max-width: 100%;
+}
+
+
+@media screen and (min-width: 30em){
+    body {
+        display: grid;
+        grid-template-areas: "head head"
+                            "nav main"
+                            "foot foot";
+        grid-template-rows: auto 1fr auto;
+    }
+    body#portfolio ul#portfolioItems li{
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
 }
