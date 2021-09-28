@@ -125,15 +125,15 @@ body {
 }
 
 
-body > header {
+body header {
     grid-area:head;
 }
 
-body > nav {
+body nav {
     grid-area: nav;
 }
 
-body > main {
+body main {
     grid-area: main;
 }
 
@@ -175,7 +175,12 @@ body > nav ul li{
     transition: right ease 0.5s;
 }
 
-body > nav ul li:hover{
+
+
+
+
+
+body nav ul li:hover{
     right: -10px;
 }
 
@@ -210,6 +215,17 @@ ul#portfolioItems li img{
     .a-main {
         margin-right: 2em;
     }
+    body > nav ul li{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    #fixedDiv {
+        margin: 0 auto;
+        position: fixed;
+
+    }
+
+
 
     body#portfolio ul#portfolioItems li{
         flex-basis: 48%;

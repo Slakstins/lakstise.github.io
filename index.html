@@ -19,17 +19,19 @@
     <h1>Seth E. Lakstins</h1>
   </header>
   <nav>
-    <ul>
-      <a href="#" id="aboutLink">
-        <li>About</li>
-      </a>
-      <a href="#" id="portfolioLink">
-        <li>Portfolio</li>
-      </a>
-      <a href="#" id="resumeLink">
-        <li>Resume</li>
-      </a>
-    </ul>
+    <div id="fixedDiv">
+      <ul>
+        <a href="#" id="aboutLink">
+          <li>About</li>
+        </a>
+        <a href="#" id="portfolioLink">
+          <li>Portfolio</li>
+        </a>
+        <a href="#" id="resumeLink">
+          <li>Resume</li>
+        </a>
+      </ul>
+    </div>
   </nav>
   <main data-anijs="if: load, on: window, do: bounceInRight animated;if: load, on: window, do: bounceInUp animated, to: footer">
     <div class="a-main" id="about" data-anijs="if: click, on: body > nav ul li, do: bounceInRight animated, to: main; if: click, on: body > nav ul li, do: bounceInUp animated, to: footer">
