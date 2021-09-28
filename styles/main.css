@@ -1,30 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
 
 :root {
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
-    --color: aliceblue;
-    --color-hightlight: #B0A745;
+    --color: black;
+    --color-hightlight: #304a57;
     --color-dark: #9100358a;
 }
 
 
 
-body#about img{
+body img{
     width: 20em;
+    margin-top: 1em;
 }
 
-img {width: 17em}
+#sortMyProfessor {width: 17em}
+#jetpackJoust {width: 33em}
+#RHITClassMap {width: 35em}
+#thirdPartyChess {width: 25em}
 
-p, li {
+p {
     max-width: 50em;
+    font-size: 20px;
+    line-height: 1.3em;
+}
+
+li {
+    max-width: 48em;
     font-size: 18px;
     line-height: 1.3em;
 }
+
+
 h1, h2, h3{
     line-height: 1em;
-    height: 50px;
     font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+h1{
+    font-size: 2.2em;
+}
+h2{
+  font-size: 1.75em;
+  margin-block-end: 0.3em;
+  margin-block-start: 0.8em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+span{
+    float: right;
+    font-size: 0.8em;
 }
 
 a {
@@ -36,31 +68,60 @@ a:hover {
     text-decoration-color: var(--color-dark);
 }
 
+#socials{
+    white-space: nowrap;
+    
+}
+
+.fa {
+  padding: 30px 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+.fa:hover{
+    top: -10px;
+}
+
 body > * {
     padding-left: var(--horizontal-space);
     padding-right: var(--horizontal-space);
 }
 
-main {
+.a-main {
+    padding: 0.7em 2em;
+    padding-top: 0.05em;
+
+
     background-color: var(--color-dark);
+    margin-top: .7em;
+    border-radius: 20px;
 }
 
 body {
+  background-size: 2em 2em;
+  background-color: white;
     color: var(--color);
-    background: #0F2027;  /* fallback for old browsers */
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-areas: "head head"
-                         "nav nav"
-                         "main main"
-                         "foot foot";
+                            "nav nav"
+                            "main main"
+                            "foot foot";
     grid-template-columns: 1fr 4fr;
     grid-template-rows: auto auto 1fr auto;
 
+
 }
 
+.hidden{
+    display:none;
+}
 
 
 body > header {
@@ -77,6 +138,7 @@ body > main {
 
 body > footer {
     grid-area: foot;
+    text-align: center;
 }
 
 header, footer {
@@ -93,32 +155,58 @@ body > nav ul {
     padding: 0;
 }
 
-body > nav ul li{
-    padding-right: 1rem;
-    display: inline;
+#mainContainer{
+    padding: 0px;
+    margin: 0px;
 }
 
-body#portfolio ul#portfolioItems{
+body > nav ul li{
+    padding-right: 1rem;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.6em;
+    background-color: rgba(133, 175, 180, 0.726);
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    right: 0;
+    transition: right ease 0.5s;
+}
+
+body > nav ul li:hover{
+    right: -10px;
+}
+
+ul#portfolioItems{
     display: flex;
     flex-wrap: wrap;
     flex: 1;
     list-style-type: none;
     padding: 0;
 }
-body#portfolio ul#portfolioItems li img{
+ul#portfolioItems li img{
 
     max-width: 100%;
 }
 
 
+
+
+
 @media screen and (min-width: 30em){
     body {
         display: grid;
-        grid-template-areas: "head head"
+        grid-template-areas: "head main"
                             "nav main"
                             "foot foot";
-        grid-template-rows: auto 1fr auto;
+        grid-template-rows: auto 1fr auto ;
     }
+
+    .a-main {
+        margin-right: 2em;
+    }
+
     body#portfolio ul#portfolioItems li{
         flex-basis: 48%;
         padding-right: 2%;

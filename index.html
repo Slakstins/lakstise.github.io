@@ -1,40 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Seth Lakstins' Website</title>
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="icon" href="images/favicon.png" />
-    <script src="scripts/main.js" defer></script>
-  </head>
-  <body id="about">
-    <header>
-      <h1>Seth E. Lakstins</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-    <main>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seth Lakstins' Website</title>
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/anijs-min.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Seth E. Lakstins</h1>
+  </header>
+  <nav>
+    <ul>
+      <a href="#" id="aboutLink">
+        <li>About</li>
+      </a>
+      <a href="#" id="portfolioLink">
+        <li>Portfolio</li>
+      </a>
+      <a href="#" id="resumeLink">
+        <li>Resume</li>
+      </a>
+    </ul>
+  </nav>
+  <main data-anijs="if: load, on: window, do: bounceInRight animated;if: load, on: window, do: bounceInUp animated, to: footer">
+    <div class="a-main" id="about" data-anijs="if: click, on: body > nav ul li, do: bounceInRight animated, to: main; if: click, on: body > nav ul li, do: bounceInUp animated, to: footer">
       <h1>About</h1>
-      
-      <img src="images/ProfilePic.jpg" alt="seth" id="profilePic">
-      <p>Hi! I'm Seth. Currently, I'm seeking a software internship for the summer of 2022 or a full-time software position in November 2022.</p>
-          
+      <hr>
+
+      <img src="images/ProfilePic.jpg" alt="Seth Lakstins" id="profilePic">
+      <p>Hi! I'm Seth. Currently, I'm seeking a software internship for the summer of 2022 or a full-time software
+        position in November 2022.</p>
+
 
       <p>My interest in computer science stems from my enjoyment of
-         problem-solving in a group and the satisfaction I feel from 
-         completing a project. I am searching for a summer internship 
-         with a positive, inclusive work environment in order to learn 
-         more about software development while building on my resume.</p>   
-    </main>
-    <footer>
-      You can email me at lakstise@rose-hulman.edu
-    </footer>
-  </body>
+        problem-solving in a group and the satisfaction I feel from
+        completing a project. I am searching for a summer internship
+        with a positive, inclusive work environment in order to learn
+        more about software development while building on my resume.</p>
+    </div>
+    <div class="a-main hidden" id="resume" >
+      <h1>Resume</h1>
+      <hr>
+      <h3><a target="_blank"
+          href="https://rosehulman-my.sharepoint.com/:b:/g/personal/lakstise_rose-hulman_edu/Eaj8_yWZHhNIlfJm3MbLoLQBMfsvHRkq-nRQ-JnyGRrxRA?e=5MV4av">View
+          Resume PDF</a></h3>
+      <p>Bachelor of Science, Computer Science <span November 2022></span></p>
+      <p>Rose-Hulman Institute of Technology, Terre Haute, IN <span>3.93 / 4.0 GPA</span></p>
+      <h2>Relevant Courses</h2>
+      <p>
+        Data Structures and Algorithm Analysis,
+        Software Requirements,
+        Database Systems,
+        Programming Language Concepts,
+        Software Design
+      </p>
+
+      <h2>Internships</h2>
+      <p>Lakstins Family LLC, Terre Haute, IN <span>Summer 2020</span></p>
+      <ul>
+        <li>Prototyped an event calendar for the Terre Haute community website using JavaScript</li>
+        <li>Followed a user interface design brief</li>
+      </ul>
+
+      <h2>Skills</h2>
+      <ul>
+        <li>Procedural programming: C</li>
+        <li>Application and Game Development: Java </li>
+        <li>Front-end Development: HTML, CSS, JavaScript</li>
+        <li>Functional Programming: Scheme; a Lisp dialect</li>
+        <li>Databases: SQL</li>
+      </ul>
+      <h2>Experience</h2>
+      <p>Logan Library, Terre Haute, IN <span id="dateRange">2019 - Present</span></p>
+      Full-time summer student worker
+      <ul>
+        <li>
+          Modified the library catalog and its digital databases in Excel
+        </li>
+        <li>
+          Completed projects to improve library function
+        </li>
+      </ul>
+      <h2>Activities</h2>
+      <ul>
+        <li>
+          Rose-Hulman Jazz Band, lead trombone: <span>2019 – Present</span>
+        </li>
+        <li>
+          Rose-Hulman Climbing Club: <span>2019 – Present</span>
+        </li>
+      </ul>
+
+    </div>
+    <div class="a-main hidden" id="portfolio" >
+      <h1>Portfolio</h1>
+      <hr>
+      <ul id="portfolioItems">
+        <li>
+          <h2><a href="https://github.com/Slakstins/SortMyProf" target="_blank">Sort My Professor</a></h2>
+          <img id="sortMyProfessor" src="images/portfolio/hogwarts.jpg" alt="hogwarts crest">
+          <p>Programmed a database system with a Java front-end for students to sort their professors into Hogwarts
+            houses based on survey results</p>
+        </li>
+        <li>
+          <h2><a href="https://github.com/Slakstins/JetPackJoust" target="_blank">Jetpack Joust</a></h2>
+          <img id="jetpackJoust" src="images/portfolio/jetpackJoust.png"
+            alt="pixelated jetpack man fighting monsters with beam sword">
+          <p>Co-produced a 2D Java game demonstrating strong usage of Object-Oriented design principles</p>
+        </li>
+        <li>
+          <h2><a href="https://github.com/Slakstins/RHITMap" target="_blank">RHIT Class Map</a></h2>
+          <img id="RHITClassMap" src="images/portfolio/classMap.png" alt="RHIT map with overlay for navigation">
+          <p>Collaborated to produce a class-schedule routing application utilizing Dijkstra’s algorithm in Java</p>
+        </li>
+        <li>
+          <h2><a href="https://github.com/Slakstins/ThirdPartyChess" target="_blank">Third Party Chess</a></h2>
+          <img id="thirdPartyChess" src="images/portfolio/chess.png"
+            alt="two chess windowns with socket communication roles listed">
+          <p>Designed and programmed a three-player variant of chess utilizing socket communication and multi-threading
+            in Java
+          </p>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer>
+    You can email me at <a href="mailto:lakstise@rose-hulman.edu">lakstise@rose-hulman.edu</a>
+
+    <div id="socials">
+      <a target="_blank" href="https://github.com/Slakstins" class="fa fa-2x fa-github"></a>
+      <a target="_blank" href="https://www.linkedin.com/in/seth-lakstins-05aa561b4/" class="fa fa-2x fa-linkedin"></a>
+      <a target="_blank" href="https://www.instagram.com/seth_lakstins/" class="fa fa-2x fa-instagram"></a>
+      <a target="_blank" href="https://www.facebook.com/seth.lakstins/" class="fa fa-2x fa-facebook"></a>
+    </div>
+
+  </footer>
+</body>
+
 </html>
